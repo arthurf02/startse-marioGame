@@ -1,5 +1,13 @@
 const mario = document.querySelector(".super-mario");
 const pipe = document.querySelector(".pipe-game");
+document.querySelector('.super-mario').style.display="none";
+document.querySelector('.pipe-game').style.display="none";
+function start(){
+document.querySelector('#start').style.display="none";
+const mario = document.querySelector(".super-mario");
+const pipe = document.querySelector(".pipe-game");
+document.querySelector('.super-mario').style.display=""
+document.querySelector('.pipe-game').style.display=""
 
 let score=document.querySelector("#score");
 let points=0;
@@ -45,3 +53,4 @@ const loopGame = setInterval(() => {
 },10);
 
 document.addEventListener("keydown", jump);
+};
