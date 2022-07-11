@@ -1,18 +1,19 @@
+//initial game state
 const mario = document.querySelector(".super-mario");
 const pipe = document.querySelector(".pipe-game");
 document.querySelector('.super-mario').style.display="none";
 document.querySelector('.pipe-game').style.display="none";
+document.querySelector('.gameOver-container').style.display="none";
+
+//game execution
 function start(){
-document.querySelector('#start').style.display="none";
-const mario = document.querySelector(".super-mario");
-const pipe = document.querySelector(".pipe-game");
-document.querySelector('.super-mario').style.display=""
-document.querySelector('.pipe-game').style.display=""
+document.querySelector('.start-container').style.display="none";
+document.querySelector('.super-mario').style.display="";
+document.querySelector('.pipe-game').style.display="";
 
 let score=document.querySelector("#score");
 let points=0;
 const scorePoints= setInterval(()=>{
-  const pipePosition = pipe.offsetLeft;
   const marioPosition = +window
     .getComputedStyle(mario)
     .bottom.replace("px", "");
@@ -49,8 +50,17 @@ const loopGame = setInterval(() => {
     mario.style.marginLeft = "45px";
 
     clearInterval(loopGame);
+    gameOver();
   }
 },10);
 
 document.addEventListener("keydown", jump);
+};
+
+function gameOver(){
+  document.querySelector('.gameOver-container').style.display="";
+};
+
+function restart(){
+  location.reload();
 };
