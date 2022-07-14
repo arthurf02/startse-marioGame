@@ -60,13 +60,15 @@
 }
 
 .pipe-game {
+    display: none;
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 1.5s infinite linear;
+    animation: none;
 }
 
 .super-mario{
+    display: none;
     width:150px;
     position: absolute;
     bottom: 0;

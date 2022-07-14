@@ -1,18 +1,14 @@
 //initial game state
 const mario = document.querySelector(".super-mario");
 const pipe = document.querySelector(".pipe-game");
-document.querySelector('.super-mario').style.display = "none";
-document.querySelector('.pipe-game').style.display = "none";
 document.querySelector('.gameOver-container').style.display = "none";
 
 //game execution
 function start(){
-  mario.src = "./Images/super-mario.gif";
-  pipe.src = "./Images/pipe-game.png";
-  pipe.style.animation = "pipe-animation 1.5s infinite linear";
   document.querySelector('.start-container').style.display = "none";
-  document.querySelector('.super-mario').style.display = "";
-  document.querySelector('.pipe-game').style.display = "";
+  mario.style.display="block";
+  pipe.style.display="block";
+  pipe.style.animation = "pipe-animation 1.5s infinite linear";
 
   let score = document.querySelector("#score");
   let points = 0;
